@@ -1,3 +1,35 @@
 page-home {
+  .tbgwrap { padding: 10px;}
+  .tphoto {
+    height: 500px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    top: 15px;
+    border-radius: 10px;
+    border: 1px solid #c0c0c0;
+    padding-bottom: 60px;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px #c0c0c0;
+  }
+  .tname {
+    padding: 15px;
+    font-size: 20px;
+    font-family: 'Helvetica', sans-serif;
+    float: left;
+  }
+  .tname .age { font-weight: 200; }
+  .button-group {
+    text-align: center;
+    margin-top: 2.4vh;
+  }
 
+
+  .button-click {
+    border-radius: 50%;
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-left: 0.6vw;
+    margin-right: 0.6vw;
+  }
 }
