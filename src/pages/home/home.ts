@@ -9,7 +9,8 @@ export class HomePage {
   activity: {
     image: string,
     title: string,
-    info: string
+    info: string,
+    distance: number
   };
 
   constructor(public navCtrl: NavController) {
@@ -19,7 +20,8 @@ export class HomePage {
     this.activity = {
       image: "http://lorempixel.com/400/300",
       title: "Bada i Havsbadet",
-      info: "wrqprwqrhqwrhwqrhwqrpwq"
+      info: "beep boop",
+      distance: 5
     }
   }
 }
