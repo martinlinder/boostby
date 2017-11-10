@@ -3,13 +3,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 
-/**
- * Generated class for the AddActivityPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-add-activity',
@@ -26,11 +19,6 @@ export class AddActivityPage {
     info: string,
     distance: number
   };
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AddActivityPage');
-  }
-
 
   save(title, info) {
 
@@ -56,13 +44,8 @@ export class AddActivityPage {
       }
 
     }).catch(function (error) {
-
+        console.log(error);
     });
-
-
-
-
-
 
     this.navCtrl.pop();
   }
