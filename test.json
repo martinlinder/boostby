@@ -1,0 +1,22 @@
+{
+    "cards": [
+        {
+            "image": "http://lorempixel.com/400/300",
+            "title": "Grilla med kompisar",
+            "info": "Plats: Hemma hos mig",
+            "distance": "7"
+        },
+        {
+            "image": "http://lorempixel.com/400/300",
+            "title": "Bada med kompisar",
+            "info": "Plats: Hemma hos mig",
+            "distance": "5"
+        },
+        {
+            "image": "http://lorempixel.com/400/300",
+            "title": "Festa med kompisar",
+            "info": "Tid: Ikväll!!!",
+            "distance": "3"
+        }
+    ]
+}

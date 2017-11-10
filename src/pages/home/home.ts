@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { AddActivityPage} from '../add-activity/add-activity';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
+
+
 export class HomePage {
   activity: {
     image: string,
@@ -13,15 +17,23 @@ export class HomePage {
     distance: number
   };
 
-  constructor(public navCtrl: NavController) {
-    this.getActivity()
+  constructor(public navCtrl: NavController,private storage: Storage) {
   }
+
+  ionViewWillEnter(){
+
+    this.getActivity();
+
+  }
+
   getActivity(): void {
-    this.activity = {
-      image: "http://lorempixel.com/400/300",
-      title: "Bada i Havsbadet",
-      info: "beep boop",
-      distance: 5
-    }
+    this.storage.get('activities').then((tempArray) => {      
+      this.activity = tempArray[tempArray.length-1];
+    }).catch(function(error){
+      console.log(error);
+    });
+  }
+  createActivity(): void{
+    this.navCtrl.push(AddActivityPage);
   }
 }

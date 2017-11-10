@@ -1,16 +1,21 @@
 <ion-header>
+
   <ion-navbar>
     <ion-title>Home</ion-title>
+    <ion-buttons end>
+        <button (click)="createActivity()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+      </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content no-bounce>
   <div class="tbgwrap">
     <div class="tphoto">
-      <img src="{{activity.image}}"/>
-      <h1 text-center>{{activity.title}}</h1>
-      <div style="width: 80%; margin:auto"><p>{{activity.info}}</p>
-        <p>{{activity.distance}} Km away</p>
+      <img src="{{activity?.image}}"/>
+      <h1 text-center>{{activity?.title}}</h1>
+      <div style="width: 80%; margin:auto"><p>{{activity?.info}},{{activity?.distance}} Km away</p>
       </div>
       <ion-row>
         <ion-col class="button-group">
