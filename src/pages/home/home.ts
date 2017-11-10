@@ -8,7 +8,6 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'home.html'
 })
 
-
 export class HomePage {
   activity: {
     image: string,
@@ -21,9 +20,7 @@ export class HomePage {
   }
 
   ionViewWillEnter(){
-
     this.getActivity();
-
   }
 
   getActivity(): void {
@@ -33,6 +30,7 @@ export class HomePage {
       console.log(error);
     });
   }
+  
   createActivity(): void{
     this.navCtrl.push(AddActivityPage);
   }
