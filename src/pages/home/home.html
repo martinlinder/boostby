@@ -4,14 +4,27 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content no-bounce>
+  <div class="tbgwrap">
+    <div class="tphoto">
+      <img src="{{activity.image}}"/>
+      <h1 text-center>{{activity.title}}</h1>
+      <div style="width: 80%; margin:auto"><p>{{activity.info}}</p>
+        <p>{{activity.distance}} Km away</p>
+      </div>
+      <ion-row>
+        <ion-col class="button-group">
+          <button color="green" ion-button class="button button-click">
+            <ion-icon name="heart"></ion-icon>
+          </button>
+          <button color="primary" ion-button class="button button-click">
+            <ion-icon name="information"></ion-icon>
+          </button>
+          <button color="red" ion-button class="button button-click">
+            <ion-icon name="close"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
 </ion-content>
